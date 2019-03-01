@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--接通界面-->
+        <RelativeLayout
+            android:id="@+id/answer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl_camera_remote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_audio_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_wt"
+                    android:textSize="@dimen/t6"
+                    android:layout_centerHorizontal="true"
+                    android:text="语音通话"
+                    android:layout_marginTop="@dimen/px_positive_210" />
+
+                <com.cmri.moudleapp.moudlevoip.view.ContactHeadLayout
+                    android:id="@+id/contact_answer"
+                    android:layout_width="@dimen/px_positive_268"
+                    android:layout_height="@dimen/px_positive_280"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/px_positive_300" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_bg_round"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_count_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_white">
+                </TextView>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/answer_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="100dp">
+
+                <ImageView
+                    android:id="@+id/btn_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:layout_marginRight="@dimen/px_positive_60"
+                    android:onClick="onActionClick" />
+
+                <ImageView
+                    android:id="@+id/btn_mute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:layout_toRightOf="@id/btn_action"
+                    android:layout_centerVertical="true"
+                    android:onClick="onMuteClick" />
+
+                <ImageView
+                    android:id="@+id/iv_answer_hangup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/btn_mute"
+                    android:focusable="true"
+                    android:onClick="onHangUpClick"
+                    android:layout_marginLeft="@dimen/px_positive_60"
+                    android:src="@drawable/btn_hangup_bg" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!--1v1视频来电-->
+        <RelativeLayout
+            android:id="@+id/coming_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_wt"
+                android:textSize="@dimen/t6"
+                android:layout_centerHorizontal="true"
+                android:text="邀请你视频聊天"
+                android:layout_marginTop="@dimen/px_positive_210" />
+
+            <com.cmri.moudleapp.moudlevoip.view.ContactHeadLayout
+                android:id="@+id/contact_incoming"
+                android:layout_width="@dimen/px_positive_268"
+                android:layout_height="@dimen/px_positive_280"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/px_positive_300" />
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/px_positive_160"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_coming_hangup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_positive_134"
+                    android:focusable="true"
+                    android:onClick="onHangUpClick"
+                    android:src="@drawable/btn_hangup_bg" />
+
+                <ImageView
+                    android:id="@+id/btn_coming_pickup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_positive_134"
+                    android:focusable="true"
+                    android:onClick="onPickUpClick"
+                    android:src="@drawable/btn_pickup_bg" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_camera_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/btn_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-50dip" />
+
+        </RelativeLayout>
+        <!--1v1视频去电-->
+        <RelativeLayout
+            android:id="@+id/outgoing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_positive_300"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/talk_gradien_bg_up_to_down" />
+
+            <RelativeLayout
+                android:id="@+id/rl_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_positive_240"
+                android:layout_marginTop="@dimen/px_positive_126"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="name"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_wt"
+                    android:textSize="@dimen/t4" />
+
+                <ImageView
+                    android:id="@+id/iv_outgoing_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_positive_16"
+                    android:layout_toRightOf="@+id/tv_name"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_tv" />
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_positive_40"
+                    android:layout_toRightOf="@+id/iv_outgoing_type"
+                    android:text="number"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_gy01"
+                    android:textSize="@dimen/t5" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/rl_info"
+                android:layout_below="@id/rl_info"
+                android:layout_marginTop="@dimen/px_positive_20"
+                android:text="@string/outgoing_tip"
+                android:textColor="@color/color_wt"
+                android:textSize="@dimen/t4" />
+
+
+            <ImageView
+                android:id="@+id/iv_outgoing_hangup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/px_positive_160"
+                android:focusable="true"
+                android:onClick="onHangUpClick"
+                android:src="@drawable/btn_hangup_bg" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_positive_300"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/talk_gradien_bg_down_to_up" />
+        </RelativeLayout>
+
+        <TableLayout
+            android:id="@+id/table_layout"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="#66ffffff">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="   上行   " />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="   下行   " />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="码率    ：" />
+
+                <TextView
+                    android:id="@+id/code_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/code_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="" />
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+
+                    android:text="帧率  ：" />
+
+                <TextView
+                    android:id="@+id/tv_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+
+                    android:text="回延迟路：" />
+
+                <TextView
+                    android:id="@+id/tv_rttms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+
+                    android:text="" />
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="three" />-->
+
+            </TableRow>
+        </TableLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

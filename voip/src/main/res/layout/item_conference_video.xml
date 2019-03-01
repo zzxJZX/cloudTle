@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_video_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_video_member_bg">
+
+        <RelativeLayout
+            android:id="@+id/layout_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <!--重新呼叫界面-->
+    <RelativeLayout
+        android:id="@+id/re_invite_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_video_member_bg">
+
+        <!--头像昵称-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/re_invite_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击重新呼叫"
+                android:textColor="@color/color_wt"
+                android:textSize="16sp" />
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/member_avatar_layout"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/contact_background_blur_select"-->
+                <!--android:focusable="true"-->
+                <!--android:padding="@dimen/px_positive_24">-->
+
+
+                <com.cmri.moudleapp.moudlevoip.view.ContactHeadLayout
+                    android:id="@+id/member_avatar"
+                    android:layout_width="@dimen/px_positive_174"
+                    android:layout_height="@dimen/px_positive_186"
+                    android:padding="@dimen/px_positive_22"
+                    android:background="@drawable/contact_background_blur_select"
+                    android:focusable="true"
+                    app:showSingleName="true"
+                    app:smallDefaultHead="true"
+                    app:nameTextSize="@dimen/t6"
+                    app:nameTextColor="@color/color_wt"
+                    app:textBackgroundHeight="@dimen/px_positive_50"/>
+
+            <!--</RelativeLayout>-->
+            <!--<TextView-->
+            <!--android:id="@+id/member_name"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:text="0571000000000"-->
+            <!--android:textColor="@color/side_text_color"/>-->
+
+            <TextView
+                android:id="@+id/member_status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="对方未登录"
+                android:textColor="@color/color_wt"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!--加载文字-->
+        <!--<LinearLayout
+            android:id="@+id/loading_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#e38533"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/dot_loading_anim" />
+
+        </LinearLayout>
+-->
+
+    </RelativeLayout>
+
+
+    <!--空背景界面-->
+    <RelativeLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_video_member_bg"
+        android:visibility="gone" />
+
+</RelativeLayout>

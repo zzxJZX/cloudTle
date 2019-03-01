@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Ims固话</string>
+    <string name="content_description_add_contact">加入到联系人</string>
+    <string name="address_bar_hint">输入号码或地址</string>
+    <string name="app_id" >56c6ab94</string>
+    <string name="cancel">取消</string>
+    <string-array name="randomserch">
+        <item>7316463</item>
+        <item>790142</item>
+        <item>1271193</item>
+        <item>74172066</item>
+        <item>243120061</item>
+        <item>74123560</item>
+        <item>7887818</item>
+    </string-array>
+</resources>

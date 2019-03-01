@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:layout_width="0dp"
+            android:layout_height="0dp" /><!--修复拨打时会闪屏的bug，Activity第一次加载surfaceview会重新reloadlayout-->
+        <!--来电界面-->
+        <RelativeLayout
+            android:id="@+id/coming_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+
+            <TextView
+                android:id="@+id/tv_invite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邀请你视频聊天"
+                android:textColor="@color/color_wt"
+                android:textSize="@dimen/t6"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/px_positive_140"/>
+
+            <com.cmri.moudleapp.moudlevoip.view.ContactHeadLayout
+                android:id="@+id/contact_incoming"
+                android:layout_width="@dimen/px_positive_268"
+                android:layout_height="@dimen/px_positive_280"
+                android:layout_below="@+id/tv_invite"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/px_positive_26" />
+
+            <TextView
+                android:id="@+id/tv_mems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contact_incoming"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/px_positive_84"
+                android:text="通话成员" />
+
+            <LinearLayout
+                android:id="@+id/contact_incoming_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_mems"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/px_positive_24"
+                android:orientation="horizontal">
+
+                <com.cmri.moudleapp.moudlevoip.view.ContactHeadLayout
+                    android:id="@+id/contact_incoming_item_1"
+                    android:layout_width="@dimen/px_positive_144"
+                    android:layout_height="@dimen/px_positive_156"
+                    app:showSingleName="true"
+                    app:smallDefaultHead="true"
+                    app:nameTextSize="@dimen/t6"
+                    app:nameTextColor="@color/color_wt"
+                    app:textBackgroundHeight="@dimen/px_positive_50"
+                    android:visibility="gone"/>
+
+                <com.cmri.moudleapp.moudlevoip.view.ContactHeadLayout
+                    android:id="@+id/contact_incoming_item_2"
+                    android:layout_width="@dimen/px_positive_144"
+                    android:layout_height="@dimen/px_positive_156"
+                    android:layout_marginLeft="@dimen/px_positive_24"
+                    app:showSingleName="true"
+                    app:smallDefaultHead="true"
+                    app:nameTextSize="@dimen/t6"
+                    app:nameTextColor="@color/color_wt"
+                    app:textBackgroundHeight="@dimen/px_positive_50"
+                    android:visibility="gone"/>
+
+                <com.cmri.moudleapp.moudlevoip.view.ContactHeadLayout
+                    android:id="@+id/contact_incoming_item_3"
+                    android:layout_width="@dimen/px_positive_144"
+                    android:layout_height="@dimen/px_positive_156"
+                    android:layout_marginRight="@dimen/px_positive_24"
+                    android:layout_marginLeft="@dimen/px_positive_24"
+                    app:showSingleName="true"
+                    app:smallDefaultHead="true"
+                    app:nameTextSize="@dimen/t6"
+                    app:nameTextColor="@color/color_wt"
+                    app:textBackgroundHeight="@dimen/px_positive_50"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/coming_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/px_positive_36">
+
+                <ImageView
+                    android:id="@+id/btn_hangup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:onClick="onHangUpConfClick"
+                    android:src="@drawable/btn_hangup_bg" />
+
+                <ImageView
+                    android:id="@+id/btn_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_positive_144"
+                    android:layout_toRightOf="@id/btn_hangup"
+                    android:onClick="onPickUpConfClick"
+                    android:src="@drawable/btn_pickup_bg" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--应答界面-->
+        <RelativeLayout
+            android:id="@+id/answer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/video_recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/time_txt"
+                android:layout_width="@dimen/px_positive_144"
+                android:layout_height="@dimen/px_positive_60"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/px_positive_54"
+                android:background="@drawable/bg_conf_time"
+                android:drawablePadding="1.5dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:maxWidth="150dp"
+                android:text="--"
+                android:shadowColor="#f0000000"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="3"
+                android:textColor="@color/color_wt"
+                android:textSize="@dimen/t6"/>
+
+            <RelativeLayout
+                android:id="@+id/answer_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/px_positive_36">
+
+                <ImageView
+                    android:id="@+id/btn_mute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onMuteConfClick"
+                    android:focusable="true" />
+
+                <ImageView
+                    android:id="@+id/btn_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/btn_hangup_bg"
+                    android:layout_toRightOf="@id/btn_mute"
+                    android:layout_marginLeft="@dimen/px_positive_144"
+                    android:onClick="onHangUpConfClick"
+                    android:focusable="true" />
+
+                <ImageView
+                    android:id="@+id/btn_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/btn_close"
+                    android:layout_marginLeft="@dimen/px_positive_144"
+                    android:onClick="onInviteConfClick"
+                    android:src="@drawable/btn_invite_bg"
+                    android:focusable="true"
+                    />
+
+            </RelativeLayout>
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:src="@drawable/video_bg_one"-->
+                <!--android:visibility="gone"/>-->
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:src="@drawable/video_bg_two"-->
+                <!--android:visibility="gone"-->
+                <!--/>-->
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:src="@drawable/video_bg_three"-->
+                <!--android:visibility="gone"/>-->
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:src="@drawable/video_bg_four"-->
+                <!--android:visibility="gone"/>-->
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

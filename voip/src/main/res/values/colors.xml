@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--渐变色系-->
+    <color name="color_gradient_left_bu">#0068b2</color>
+    <color name="color_gradient_right_bu">#46b4eb</color>
+
+    <color name="color_gradient_left_gn">#518c31</color>
+    <color name="color_gradient_right_gn">#a7bf39</color>
+
+    <color name="color_gradient_left_og">#e58422</color>
+    <color name="color_gradient_right_og">#d9c021</color>
+
+    <!--颜色-->
+    <color name="color_bg">#161d40</color>
+    <color name="color_ppl">#7e73e6</color>
+
+    <color name="color_wt">#f1f1f1</color>
+    <color name="color_pure_wt">#ffffff</color>
+
+    <color name="color_wt_alpha50">#80f1f1f1</color>
+
+    <color name="color_gy01">#cccccc</color>
+    <color name="color_gy02">#999999</color>
+
+    <color name="color_gy01_alpha">#4dcccccc</color>
+    <color name="color_wt_alpha_start">#4df1f1f1</color>
+    <color name="color_wt_alpha_end">#1af1f1f1</color>
+    <color name="color_bg_alpha80">#cc161d40</color>
+    <color name="color_gy01_alpha20">#33cccccc</color>
+
+    <color name="color_black_alpha">#60000000</color>
+
+    <color name="color_miss_call">#e54c2e</color>
+
+    <color name="setting_contact_textBg">#7f000000</color>
+
+
+
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+    <!-- 拨号 -->
+    <color name="dial_main_bg_color">#f4f4f4</color>
+    <color name="item_call_record_line_color">#e0e1e1</color>
+    <color name="call_record_name_color">#ffffff</color>
+    <color name="call_record_number_color">#ffffff</color>
+    <color name="call_record_time_color">#ffffff</color>
+    <color name="keypad_text_color">#ffffff</color>
+    <color name="keypad_line_color">#b8b8b8</color>
+    <color name="input_number_layout_color">#f8f8f8</color>
+    <color name="input_number_above_line_color">#b8b8b8</color>
+    <color name="input_number_below_line_color">#e0e1e1</color>
+
+    <color name="side_text_color">#ffffff</color>
+    <color name="new_version_title">#35b34f </color>
+    <color name="new_version_divide">#a5e9b3 </color>
+    <color name="color_new_version">#fcab2c </color>
+    <color name="progressBg">#e8f3fd</color>
+    <color name="progressStar">#d80d6c</color>
+    <color name="progressEnd">#ff4faa</color>
+    <color name="account_illustration_title">#999999</color>
+
+    <!--规范-->
+    <color name="color_white">#f1f1f1</color>
+    <color name="color_white_35">#5af1f1f1</color>
+    <color name="color_1">#09bf99</color>
+    <color name="transparent_1">#4D757577</color>
+    <color name="transparent_17">#2B000000</color>
+
+    <!--20%透明度-->
+    <color name="transparent_20">#33000000</color>
+    <!--35%透明度-->
+    <color name="transparent_35">#5A000000</color>
+    <!--60%透明度-->
+    <color name="transparent_60">#99000000</color>
+    <!--70%透明度-白色-->
+    <color name="main_header_show">#B4FFFFFF</color>
+    <!--35%透明度-白色-->
+    <color name="transparent_white_35">#5AF1F1F1</color>
+    <!--字体颜色-->
+    <color name="text_color_3">#333333</color>
+    <color name="text_color_6">#666666</color>
+    <color name="text_color_9">#999999</color>
+    <color name="text_color_f1">#F1F1F1</color>
+    <color name="text_color_80">#808080</color>
+    <color name="text_color_52">#525252</color>
+    <!--线条颜色-->
+    <color name="line_color_3">#333333</color>
+    <color name="line_color_6">#666666</color>
+    <color name="line_color_d9">#d9d9d9</color>
+    <color name="line_color_f1">#fff1f1f1</color>
+
+    <color name="background_gradient_start">#FFFFFF</color>
+    <color name="background_gradient_end">#DDDDDD</color>
+    <color name="fastlane_background">#06838f</color>
+    <color name="fastlane_teal_background">#00796B</color>
+    <color name="search_opaque">#ffaa3f</color>
+    <color name="search_color">#FFEB3B</color>
+    <color name="search_bright_color">#FFEB3B</color>
+    <color name="search_icon_color">#222222</color>
+    <color name="accent">#80D3FB</color>
+    <color name="settings_background">#00695C</color>
+    <color name="card_examples_background">#222222</color>
+
+    <color name="yellow_dark">#A4815F</color>
+    <color name="yellow_light">#C8A786</color>
+    <color name="brown">#f0b689</color>
+    <color name="white">#F1F1F1</color>
+    <color name="black">#000000</color>
+
+    <color name="golde1">#C8A786</color>
+    <color name="golde2">#A4815F</color>
+
+    <color name="contact_unselect_color">#5AF1F1F1</color>
+
+    <color name="contact_detail_number_select_bg">#FEFEFE</color>
+
+    <color name="red">#D80000</color>
+    <color name="select_person">#48413c</color>
+    <color name="multi_person">#dd914e</color>
+    <color name="conf_time">#fefefe</color>
+    <color name="divide_line">#f7f7f7</color>
+    <color name="checkbox_text">#737373</color>
+    <color name="checkbox_select_text">#e38533</color>
+    <color name="cb_checked_text">#c6c6c6</color>
+
+    <color name="card_num_bg_color">#4d000000</color>
+    <color name="phone_list_title_color">#ca874b</color>
+
+    <color name="phone_list_normal_bg">#e6e6e6</color>
+    <color name="phone_list_press_bg">#ffffff</color>
+
+    <color name="phone_list_line_bg">#cccccc</color>
+
+</resources>

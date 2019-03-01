@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    >
+
+
+    <Button
+        android:onClick="actionloginin"
+        android:layout_centerInParent="true"
+        android:id="@+id/login_bu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/about_anim"
+        android:gravity="center"
+        android:text="登录IMS"
+        android:textColor="@android:color/white" />
+    <Button
+        android:onClick="actionloginout"
+        android:layout_centerInParent="true"
+        android:id="@+id/logout_bu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/about_anim"
+        android:gravity="center"
+        android:text="登出IMS"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:onClick="wifiConfig"
+        android:layout_centerInParent="true"
+        android:id="@+id/config_bu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/about_anim"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="HY快联"
+        android:textColor="@android:color/white" />
+</LinearLayout>

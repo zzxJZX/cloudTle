@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <EditText
+        android:id="@+id/ed_ott_login_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="登录号码"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="actionOttLogin"
+        android:text="登录ott"/>
+
+    <EditText
+        android:id="@+id/ed_call_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="呼叫号码"/>
+
+    <Button
+        android:id="@+id/btn_audio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="actionOttCallAudio"
+        android:text="呼叫音频"/>
+
+    <Button
+        android:id="@+id/btn_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="actionOttCallVideo"
+        android:text="呼叫视频"/>
+
+
+    <Button
+        android:id="@+id/btn_logout_ott"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="actionOttCallLogout"
+        android:text="登出"/>
+
+
+</LinearLayout>

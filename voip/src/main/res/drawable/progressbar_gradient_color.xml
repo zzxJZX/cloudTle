@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@android:id/background"
+        android:drawable="@drawable/progressbar_update_version">
+
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="5dip" />
+                <gradient
+                    android:angle="0"
+                    android:endColor="#77f566"
+                    android:startColor="#03db4b" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

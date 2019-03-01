@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TvMoudleCommon</string>
+
+    <!--Account-->
+    <string name="qrcode_text_install">已安装“和家亲”APP的用户，请直接扫码绑定电视</string>
+    <string name="qrcode_text_no_install">未安装APP的用户，请先扫码下载安装，再扫码绑定电视</string>>
+    <string name="qrcode_text_install_all">已安装“和家亲”APP的用户，请直接扫码绑定电视\n未安装“和家亲”APP的用户，请先扫码下载安装，再扫码绑定电视</string>>
+    <string name="qrcode_text_num">号码</string>
+    <string name="bindTvContacts">已绑定电视的用户</string>
+    <string name="bind_success">绑定成功</string>
+    <string name="no_user_bindTV">暂时无人绑定电视,请扫描右方二维码进行绑定</string>>
+    <string name="download_app_tipone">1.下载打开和家亲APP\n侧边栏打开我的电视</string>>
+    <string name="download_app_tiptwo">2.扫码左边二维码绑定</string>>
+    <string name="tv_guide">使用“和家亲”手机APP扫码绑定本电视后，可以做这些事：</string>>
+    <string name="qrcode_guide">扫描二维码下载APP/绑定电视</string>>
+
+    <!--Voip-->
+    <string name="outgoing_tip">等待对方接受邀请...</string>
+    <string name="no_camera_tip">您当前的摄像头未插入或存在异常\n暂不能使用高清视频业务，请检查后再试</string>
+
+    <string name="camera_error_tip">您的摄像头未安装或存在异常</string>
+    <string name="wifi_tip">检测到WiFi连接，可能会影响通话质量</string>
+
+</resources>
